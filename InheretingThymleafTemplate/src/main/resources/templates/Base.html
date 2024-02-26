@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<header>This is header in Base.html</header>
+
+
+<div th:replace="${content}"></div>
+
+
+
+<footer>This is footer in Base.html</footer>
+
+
+</body>
+</html>
