@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymleaf.org">
+
+<link th:href="@{/style.css}" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<h1>This is home Page</h1>
+
+<div style="height:600px;">
+
+
+</div>
+
+
+
+
+<footer th:insert="footer::footer1(${title},${Subtitle})"></footer>  <!--passing parameter that received to footer-->
+
+</body>
+</html>

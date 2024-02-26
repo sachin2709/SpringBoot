@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Loop</title>
+</head>
+<body>
+<h3>Looping on a List ...</h3>
+<!--    <span th:text="${names}"></span>-->
+    <ul>
+        <li th:each="n, status : ${names}" th:style="${status.odd}? 'color: red;' : 'color: black;'" th:text="${n}"></li>
+    </ul>
+
+
+
+
+</body>
+</html>

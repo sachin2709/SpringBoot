@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Statement</title>
+</head>
+<body>
+
+<h1>Hey Welcome to thymleaf Tutorial</h1>
+
+
+<h1>Gender is <span th:text="${gender=='M'?'Male':'Female'}"></span></h1>
+
+
+
+<h1 th:if="${age<=70}">Young</h1>
+
+<h1 th:unless="${ag<=70}">Elder</h1>
+
+<div th:each="item : ${list}">
+    <div th:switch="${item}">
+        <p th:case="'Ravinshu'">Manager is Namrata Mam</p>
+        <p th:case="'Ritik'">Manager is Zaheer Sir</p>
+        <p th:case="'Sachin'">Manager is Manish Sir</p>
+        <!-- Add more cases as needed -->
+        <p th:case="*">Default case or handle other values</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

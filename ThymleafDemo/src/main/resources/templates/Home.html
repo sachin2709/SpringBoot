@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>MyHome</title>
+</head>
+<body>
+
+<h1>Hello Welcome to my home</h1>
+
+<h3 th:text="'my name is '+${name}"> </h3>
+
+<!--<h3 th:text="'my name is '+${ #strings.toUpperCase(name)}"> </h3>-->
+<!--<h3 th:text="'my name is '+${ #strings.Length(name)}"> </h3>-->
+<!--<h3 th:text="${ #strings.toUpperCase(name)}"> </h3>-->
+<!--cant use function directly you have to use question mark-->
+<!--<h3 th:text="${ #strings.length(name)}"> </h3>-->
+<h3 th:text="'My education is '+${education}"></h3>
+
+
+<h3 th:text="${ #strings.length(name)}"></h3>
+
+<!--//question mark used to resolve error-->
+
+<h3 th:text="${ #strings.toUpperCase(name) }"></h3>
+
+<!--dont know why strings function are not working -->
+
+<div th:with="a=5,b=67,n=${name}">
+
+    <h1> Value of a +b  is <span th:text="${a+b}"></span></h1>
+    <h1>Local Value of n is <span th:text="${name}"></span> </h1>
+
+</div>
+
+
+
+<!--    <span th:text="${names}"></span>-->
+    <ul>
+        <li th:each="n, status : ${names}" th:style="${status.odd}? 'color: red;' : 'color: black;'" th:text="${n}"></li>
+    </ul>
+
+
+
+
+</body>
+</html>
