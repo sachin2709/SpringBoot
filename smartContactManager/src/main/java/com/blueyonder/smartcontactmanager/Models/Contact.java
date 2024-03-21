@@ -1,10 +1,12 @@
 package com.blueyonder.smartcontactmanager.Models;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 import lombok.Data;
 
 import lombok.NoArgsConstructor;
 import org.springframework.scheduling.support.SimpleTriggerContext;
+
+import javax.persistence.*;
 
 
 @NoArgsConstructor
